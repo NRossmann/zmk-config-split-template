@@ -46,7 +46,7 @@ jobs:
     - name: Archive (Kyria Rev3 Left)
       uses: actions/upload-artifact@v4
       with:
-        name: firmware
+        name: firmware-left
         path: kyria_rev3_left_nice_nano.uf2
     - name: West Build (Kyria Rev3 Right)
       run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -58,5 +58,5 @@ jobs:
     - name: Archive (Kyria Rev3 Right)
       uses: actions/upload-artifact@v4
       with:
-        name: firmware
+        name: firmware-right
         path: kyria_rev3_right_nice_nano.uf2
